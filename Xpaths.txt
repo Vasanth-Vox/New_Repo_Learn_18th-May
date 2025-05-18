@@ -1,0 +1,50 @@
+Learning X-Paths and its types.
+
+1.Locatnig Elements with known Attributes:
+Syntax: //*[@name='username']
+
+2.Locatnig Elements with known Element name & Attributes:
+Syntax: //input[@name='username']
+
+3.Locatnig Elements with known Exact visbile text - using text() function
+Syntax: //a[text()='Forgot Password?']  or //*[text()='Forgot Password?']
+
+4.Locatnig Elements with partial of known visbile text - using contain text function
+Syntax: //a[contains(text(),'Forgot')]
+
+5.Locatnig Elements with Multiple known Attributes:
+Syntax: //input[@name='username'][@placeholder='Employee Id'][@type='text']
+
+6.Locatnig Elements with using "starts-with" visbile text
+Syntax: //a[starts-with(text(),'Forgot')] 
+Note: DO not use any atrribute value for "starts-with" method,
+
+7.Locatnig Elements with Dynamic attribute values - we can use "Contains & starts-with" options here
+Sysntax: //input[starts-with(@class,'form-control')]  &&  //img[contains(@alt,'Medicover Employee Android App')]
+(//input[@placeholder])[1]  && //input[@placeholder]
+
+______________________________________________________________________________________________________________________
+
+8.Locating a Parent element ; Find actual and go top.
+Syntax: //input[@placeholder='Username']/parent::div   &&  //div[@class='oxd-form-actions orangehrm-login-action']/parent::form
+
+9.Locating a child element ; Find actual and go below.
+//div[@class='oxd-form-actions orangehrm-login-action']/child::button
+
+10.Locating an Ancestor element ; Find actual and go up.
+//input[@placeholder='Username']/ancestor::* or div or input or form
+
+11.Locating a Following element ; 
+//input[@placeholder='Username']/following::* or div or input
+if many, so select by position : //input[@placeholder='Username']/following::div[1]
+if want to select very last: //input[@placeholder='Username']/following::div[last()]
+
+11.Locating a Preceding element ; 
+//input[@placeholder='Username']/preceding::* or div or input
+if many, so select by position ://input[@placeholder='Username']/preceding::div[1]
+
+12.Locating a Following-Sibling element ;
+//input[@placeholder='Username']/following-sibling::* or div or input
+
+12.Locating a preceding-Sibling element ;
+//input[@placeholder='Username']/preceding-sibling::* or div or input
