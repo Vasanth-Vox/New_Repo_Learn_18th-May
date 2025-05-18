@@ -49,4 +49,4 @@ if many, so select by position ://input[@placeholder='Username']/preceding::div[
 12.Locating a preceding-Sibling element ;
 //input[@placeholder='Username']/preceding-sibling::* or div or input
 
-Xpath added in Github now
+Xpath added in Github---
